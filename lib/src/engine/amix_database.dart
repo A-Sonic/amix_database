@@ -12,7 +12,7 @@ class AmixDataBaseFile {
 
   DateTime _shouldModifyLastTimeData = DateTime.now();
   DateTime _shouldModifyLastTimeTable = DateTime.now();
-  late Directory _dataBase = Directory("$dataBasePath/$dataBaseName");
+  late final Directory _dataBase = Directory("$dataBasePath/$dataBaseName");
   late File _dataBaseTable = File("$dataBasePath/$dataBaseName/table.amidb");
   late File _dataBaseData = File("$dataBasePath/$dataBaseName/data.amidb");
   late File _dataBaseConfig = File("$dataBasePath/$dataBaseName/config.amidb");
