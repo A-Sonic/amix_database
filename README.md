@@ -1,4 +1,5 @@
 A package for Saving your Data inside local System.
+this package will make sure that your files are safe.
 
 ## Features
 
@@ -11,22 +12,13 @@ Add the following to your pubspec.yaml file.
 
 ```yaml
 dependencies:
-  amix_database: ^0.0.13
+  amix_database: ^0.0.11
 ```
 
 Import the package.
 
 ```dart
 import 'package:amix_database/amix_database.dart'
-`
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
 ```
 
 ## Usage

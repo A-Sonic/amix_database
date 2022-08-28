@@ -1,6 +1,6 @@
 name: amix_database
 description: A package for Saving your Data inside local System.
-version: 0.0.1
+version: 0.0.11
 homepage: https://github.com/peter-parker-a/amix_database
 
 environment:
