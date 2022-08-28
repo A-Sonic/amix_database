@@ -8,7 +8,7 @@ void main() async {
   await myAmDb.create();
   await myAmDb.startConfig();
   await myAmDb.clear();
-  await myAmDb.writeNewObject(key: "key", object: "armanam");
+  await myAmDb.writeNewObject(key: "key", object: "example");
   var resuklt = await myAmDb.get(key: "key");
   await myAmDb.writeNewObject(key: "23", object: [
     {"pdlpldpel": 23123},
@@ -27,7 +27,7 @@ void main() async {
   await myAmDb2.create();
   await myAmDb2.startConfig();
   await myAmDb2.clear();
-  await myAmDb2.writeNewObject(key: "key", object: "armanam");
+  await myAmDb2.writeNewObject(key: "key", object: "example");
   resuklt = await myAmDb2.get(key: "key");
   await myAmDb2.writeNewObject(key: "23", object: [
     {"pdlpldpel": 23123},
@@ -36,7 +36,7 @@ void main() async {
     ["ae"]
   ]);
   print(resuklt.data);
-  await myAmDb2.editObject(key: "key", object: "wpdlpwldpwl");
+  await myAmDb2.editObject(key: "key", object: "example");
   resuklt = await myAmDb2.get(key: "key");
   print(resuklt.data);
   resuklt = await myAmDb2.get(key: "23");
