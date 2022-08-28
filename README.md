@@ -1,27 +1,24 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A package for Saving your Data inside local System.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+you can use this DataBase for your Dart projects.
+this DataBase have a security system This system will detect changes inside DataBase files.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add the following to your pubspec.yaml file.
+
+```yaml
+dependencies:
+  amix_database: ^0.0.13
+```
+
+Import the package.
+
+```dart
+import 'package:amix_database/amix_database.dart'
+`
 
 ## Usage
 
@@ -32,8 +29,28 @@ to `/example` folder.
 const like = 'sample';
 ```
 
-## Additional information
+## Usage
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```dart
+
+import 'package:amix_database/amix_database.dart';
+
+void main() async {
+  dataBasePath = "path"; //add a path for DataBase
+
+  var myAmDb = AmixDataBaseFile("db"); //create your DataBase
+  await myAmDb.exists(); //checking if DataBase exists
+  await myAmDb.create(); //creating DataBase folders and files
+  await myAmDb.startConfig(); //start configing the DataBase
+  await myAmDb.clear(); //clear all data inside DataBase
+  await myAmDb.writeNewObject(key: "exampleKey", object: "example"); //create a object inside dataBase
+  var result = await myAmDb.get(key: "exampleKey"); //get a Object
+  await myAmDb.editObject(key:"exampleKey",object:"hello World!!"); //edit the Object
+  await myAmDb.removeObject(key:"exampleKey"); //move the Object to DataBase recycle bin
+  await myAmDb.clean(); //remove all of Objects inside recycle bin
+  await myAmDb.delete(); //delete DataBase
+}
+
+```
+
+## Additional information

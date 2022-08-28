@@ -1,5 +1,4 @@
 import 'package:amix_database/amix_database.dart';
-import 'package:amix_database/src/engine/vars.dart';
 
 void main() async {
   dataBasePath = "/var/lib/amix";
